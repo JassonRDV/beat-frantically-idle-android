@@ -1,35 +1,59 @@
-<table align = "center" style = "border-collapse: collapse;">
-  <tr>
-    <td style = "border: none;"><img src="https://github.com/JassonRDV/Develop-a-Game-in-Native-Android-with-Kotlin/blob/master/images/1.png" width="200" alt="Beat Frantically Gameplay 1"></td>
-    <td style = "border: none;"><img src="https://github.com/JassonRDV/Develop-a-Game-in-Native-Android-with-Kotlin/blob/master/images/2.png" width="200" alt="Beat Frantically Gameplay 2"></td>
-    <td style = "border: none;"><img src="https://github.com/JassonRDV/Develop-a-Game-in-Native-Android-with-Kotlin/blob/master/images/3.png" width="200" alt="Beat Frantically Gameplay 3"></td>
-    <td style = "border: none;"><img src="https://github.com/JassonRDV/Develop-a-Game-in-Native-Android-with-Kotlin/blob/master/images/4.png" width="200" alt="Beat Frantically Gameplay 4"></td>
-  </tr>
-</table>
+# Beat Frantically — Android Idle Game Prototype
 
-# Beat Frantically - Idle Game for Android
+An early Android idle game prototype written in Kotlin with Jetpack Compose. The code models gold, enemy health, damage per second, and upgrade progression.
 
-**Active Development Project: Native Android Game (Kotlin/Jetpack Compose)**
+## Project status
 
-This game is currently in its early stages of development, with the core gameplay not yet implemented. The technologies and gameplay are experimental and may evolve significantly.
+The gameplay is still being built. The current `MainActivity` has an empty Compose content block, and the game loop calculates upgrade damage without applying it to enemy health or rewards yet.
 
-**Technologies Used:**
-<p align="left">
-  <img src="https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin"/>
-  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android"/>
-  <img src="https://img.shields.io/badge/Android_Jetpack-4285F4?style=for-the-badge&logo=android&logoColor=white" alt="Android Jetpack"/>
-  <img src="https://img.shields.io/badge/Room-F7F0E7?style=for-the-badge&logo=android&logoColor=black" alt="Room"/>
-  <img src="https://img.shields.io/badge/ViewModel-F7F0E7?style=for-the-badge&logo=android&logoColor=black" alt="ViewModel"/>
-  <img src="https://img.shields.io/badge/Kotlin_Flow-F7F0E7?style=for-the-badge&logo=kotlin&logoColor=black" alt="Kotlin Flow"/>
-  <img src="https://img.shields.io/badge/Android_Navigation-F7F0E7?style=for-the-badge&logo=android&logoColor=black" alt="Android Navigation"/>
-  <img src="https://img.shields.io/badge/Hilt-00D1FE?style=for-the-badge&logo=android&logoColor=white" alt="Hilt"/>
+## Included in the code
+
+- A game state model for gold, base damage, enemy health, and defeated enemies.
+- Upgrade data with levels, damage bonuses, and an exponential cost formula.
+- A coroutine loop that runs once per second.
+- ViewModel state exposed through `StateFlow`.
+- Hilt setup for dependency injection.
+
+## Technology
+
+Kotlin, Jetpack Compose, Material 3, AndroidX ViewModel, coroutines, StateFlow, and Hilt. Room and Navigation Compose are declared as dependencies; a complete persistence or navigation flow is not implemented in the current source.
+
+## Getting started
+
+1. Clone this repository and open its root folder in Android Studio.
+2. Install Android SDK 36 and configure a Gradle JDK compatible with the project; the source targets Java 21.
+3. Sync the Gradle project.
+4. Select an emulator or device running Android 8.0 / API 26 or newer, then run the `app` configuration.
+
+To request a debug build on Windows:
+
+```powershell
+.\gradlew.bat assembleDebug
+```
+
+The current activity does not display a playable game yet.
+
+## Source guide
+
+- [GameState.kt](app/src/main/java/com/example/beatfranticallyidle/model/GameState.kt): game and upgrade models.
+- [GameViewModel.kt](app/src/main/java/com/example/beatfranticallyidle/viewmodel/GameViewModel.kt): state and game loop.
+- [MainActivity.kt](app/src/main/java/com/example/beatfranticallyidle/MainActivity.kt): Android entry point.
+
+## Reference images
+
+These images are included in the repository and do not imply that the current activity implements the illustrated interface.
+
+<p>
+  <img src="images/1.png" width="200" alt="Beat Frantically reference image 1">
+  <img src="images/2.png" width="200" alt="Beat Frantically reference image 2">
+  <img src="images/3.png" width="200" alt="Beat Frantically reference image 3">
+  <img src="images/4.png" width="200" alt="Beat Frantically reference image 4">
 </p>
 
-**Skills:** Android development, Kotlin, Local persistence with Room, Navigation Component, Dependency Injection with Hilt, MVVM Architecture
+## License
 
-**Contact:**
-<p align="left">
-  <a href="https://www.linkedin.com/in/jasson-ramos-66b897340/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-</p>
+[MIT](LICENSE).
+
+## Contact
+
+[Jasson Ramos on LinkedIn](https://www.linkedin.com/in/jasson-ramos-66b897340/)
