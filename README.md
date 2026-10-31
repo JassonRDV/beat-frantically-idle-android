@@ -56,4 +56,4 @@ These images are included in the repository and do not imply that the current ac
 
 ## Contact
 
-[Jasson Ramos on LinkedIn](https://www.linkedin.com/in/jasson-ramos-66b897340/)
+[Jasson Ramos on LinkedIn](https://www.linkedin.com/in/jassonramos/)
